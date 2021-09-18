@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [travelport]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="5" name="hotleAPIs(failed)" verbose="0">
+    <classes>
+      <class name="com.travelport.hotel.RequestRouter">
+        <methods>
+          <include name="testValidateGetRequestFieldsValuess"/>
+          <include name="testValidateGetRequestWithPastDate"/>
+          <include name="testBookARoomPostResponseObjValidation"/>
+          <include name="testBookRoomPostWithInvalidDate"/>
+        </methods>
+      </class> <!-- com.travelport.hotel.RequestRouter -->
+    </classes>
+  </test> <!-- hotleAPIs(failed) -->
+</suite> <!-- Failed suite [travelport] -->

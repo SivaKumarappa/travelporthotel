@@ -1,0 +1,42 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 10, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 6.59 sec <<< FAILURE! - in TestSuite
+testBookARoomPostResponseObjValidation(com.travelport.hotel.RequestRouter)  Time elapsed: 0.833 sec  <<< FAILURE!
+java.lang.AssertionError: Checkout Date is incorrect in Response object.. expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:568)
+	at com.all.utils.CommnUtils.validateBookRoomPostResponsObj(CommnUtils.java:53)
+	at com.travelport.hotel.RequestRouter.testBookARoomPostResponseObjValidation(RequestRouter.java:79)
+
+testBookRoomPostWithInvalidDate(com.travelport.hotel.RequestRouter)  Time elapsed: 0.035 sec  <<< FAILURE!
+java.lang.AssertionError: Veryfying POST With Invalid Date...  expected [400] but found [200]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:652)
+	at com.travelport.hotel.RequestRouter.testBookRoomPostWithInvalidDate(RequestRouter.java:98)
+
+testValidateGetRequestFieldsValuess(com.travelport.hotel.RequestRouter)  Time elapsed: 0.034 sec  <<< FAILURE!
+java.lang.AssertionError: Rooms_available field should be greater or Zero..-66 expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:568)
+	at com.travelport.hotel.Base.validatAvailabilityResponseObjFieldValues(Base.java:75)
+	at com.travelport.hotel.RequestRouter.testValidateGetRequestFieldsValuess(RequestRouter.java:36)
+
+testValidateGetRequestWithPastDate(com.travelport.hotel.RequestRouter)  Time elapsed: 0.018 sec  <<< FAILURE!
+java.lang.AssertionError: As it is a previous date, it should get an error msg.. expected [400] but found [200]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:652)
+	at com.travelport.hotel.RequestRouter.testValidateGetRequestWithPastDate(RequestRouter.java:44)
+
